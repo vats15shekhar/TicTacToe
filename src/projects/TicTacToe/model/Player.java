@@ -1,5 +1,7 @@
 package projects.TicTacToe.model;
 
+import java.util.Scanner;
+
 public class Player {
     private String playerName;
     private char symbol;
@@ -9,6 +11,16 @@ public class Player {
         this.playerName = playerName;
         this.symbol = symbol;
         this.playerType = playerType;
+    }
+
+    public Move decideMove() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the row");
+        int row = sc.nextInt();
+        System.out.println("Please enter the column");
+        int column = sc.nextInt();
+
+        return new Move(this, new Cell(row, column));
     }
 
     public void setPlayerName(String playerName) {

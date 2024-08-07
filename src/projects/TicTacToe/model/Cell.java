@@ -11,6 +11,12 @@ public class Cell {
         this.row = row;
         this.col = col;
     }
+    public Cell(int row, int col, Player player, CellState cellState) {
+        this.row = row;
+        this.col = col;
+        this.player = player;
+        this.cellState = cellState;
+    }
 
     public void setRow(int row) {
         this.row = row;
